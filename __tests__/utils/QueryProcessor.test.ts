@@ -34,4 +34,14 @@ describe("QueryProcessor", () => {
 		"Yerimar"
     	));
     });
+
+    test('should return a number', () => {
+        const query = "What is plus?";
+	const x = 49;
+	const y = 80;  
+        const response: string = QueryProcessor(query,x,y);
+        expect(response).toBe((
+		129
+    	));
+    });
 });
