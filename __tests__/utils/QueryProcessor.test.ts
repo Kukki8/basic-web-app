@@ -1,4 +1,4 @@
-import QueryProcessor from "../../utils/QueryProcessor";
+import QueryProcessor, { QueryProcessorAdd } from "../../utils/QueryProcessor";
 import '@testing-library/jest-dom'
 
 describe("QueryProcessor", () => {
@@ -39,7 +39,7 @@ describe("QueryProcessor", () => {
         const query = "What is plus?";
 	const x = 49;
 	const y = 80;  
-        const response: string = QueryProcessorAdd(query,x,y);
+        const response: number = QueryProcessorAdd(query,x,y);
         expect(response).toBe((
 		129
     	));
