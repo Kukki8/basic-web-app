@@ -20,3 +20,12 @@ export default function QueryProcessor(query: string): string {
   }
   return "";
 }
+
+export default function QueryProcessor(query: string, x: int, y: int): int {
+  
+    if (query.toLowerCase().includes("what is plus")) {
+    return (
+      x + y
+    );
+  }
+}
