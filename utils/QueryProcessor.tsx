@@ -1,3 +1,5 @@
+import { Console } from "console";
+
 export default function QueryProcessor(query: string): string {
   if (query.toLowerCase().includes("shakespeare")) {
     return (
@@ -15,17 +17,21 @@ export default function QueryProcessor(query: string): string {
 
   if (query.toLowerCase().includes("what is your name")) {
     "Yerimar"
-    // TODO actualiza el caso de prueba correspondiente en __tests__
     return ( "Yerimar" );
   }
+
+  if (query.toLowerCase().includes("plus")) {
+    const match = query.match(/(\d+)/g);
+  
+    if (match && match.length >= 2) {
+      const num1 = parseInt(match[0]);
+      const num2 = parseInt(match[1]);
+      return (num1 + num2).toString();
+    }else{
+      return "-1";
+    }
+  }
+
   return "";
 }
 
-export function QueryProcessorAdd(query: string, x: number, y: number): number {
-  
-    if (query.toLowerCase().includes("what is plus")) {
-    return x + y;
-    }else{
-      return -1;
-  }
-}
