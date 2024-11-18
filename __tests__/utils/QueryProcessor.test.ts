@@ -43,4 +43,22 @@ describe("QueryProcessor", () => {
 		"129"
     	));
     });
+
+    test('should return a number', () => {
+        const query = "What is 40 minus 20?";
+
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+		"20"
+    	));
+    });
+
+    test('should return a number', () => {
+        const query = "What is 2 multiplied by 6?";
+
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+		"12"
+    	));
+    });
 });
