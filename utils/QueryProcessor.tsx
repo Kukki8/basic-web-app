@@ -12,5 +12,11 @@ export default function QueryProcessor(query: string): string {
     // TODO actualiza el caso de prueba correspondiente en __tests__
     return ( "14-10611" );
   }
+
+  if (query.toLowerCase().includes("whats is your name")) {
+    "Yerimar"
+    // TODO actualiza el caso de prueba correspondiente en __tests__
+    return ( "Yerimar" );
+  }
   return "";
 }
