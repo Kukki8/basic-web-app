@@ -56,6 +56,32 @@ export default function QueryProcessor(query: string): string {
     }
   }
 
+  if (query.toLowerCase().includes("which") && query.toLowerCase().includes("square") && query.toLowerCase().includes("cube")) {
+    const match = query.match(/(\d+)/g);
+    const results: string[] = [];
+
+    if (match && match.length >= 2) {
+
+      match.forEach(num => {
+
+        const current = parseInt(num);
+
+        const cubeRoot = Math.cbrt(current);
+        const squareRoot = Math.sqrt(current);
+      
+        if(Number.isInteger(cubeRoot) && Number.isInteger(squareRoot)) {
+          results.push(num);
+        };
+        
+      });
+
+    return results.join(",");
+
+    }else{
+      return "-1";
+    }
+  }
+
   return "";
 }
 

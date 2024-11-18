@@ -61,4 +61,13 @@ describe("QueryProcessor", () => {
 		"12"
     	));
     });
+
+    test('should return a number', () => {
+        const query = "Which of the following numbers is both a square and a cube: 3621, 3123, 452, 484, 729, 1987, 8?";
+
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+		"729"
+    	));
+    });
 });
