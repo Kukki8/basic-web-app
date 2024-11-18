@@ -21,7 +21,7 @@ export default function QueryProcessor(query: string): string {
   return "";
 }
 
-export default function QueryProcessorAdd(query: string, x: int, y: int): int {
+export function QueryProcessorAdd(query: string, x: int, y: int): int {
   
     if (query.toLowerCase().includes("what is plus")) {
     return (
